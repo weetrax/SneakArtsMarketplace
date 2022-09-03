@@ -22,9 +22,12 @@ const Home: NextPage = () => {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      {/*
       <Script src="/assets/js/threejs.js"></Script>
       <Script defer={true} src="/assets/js/orbit-controls.js"></Script>
       <Script defer={true} src="/assets/js/globe.js"></Script>
+      */}
+      <Script defer={true} src="/assets/js/main-globe.js"></Script>
 
       <div className="my-8">
         <section className="min-h-[450px]">
