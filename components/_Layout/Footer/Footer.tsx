@@ -14,25 +14,15 @@ const Footer: React.FC<FooterProps> = () => {
           <li>
             <p>
               &copy; {new Date().getFullYear()}{" "}
-              <span className="font-bold text-primary-500">BoilerNext </span> -
-              A{" "}
               <a
-                href="https://nextjs.org/"
+                href="https://sneakarts.com"
                 target={"_blank"}
                 rel="noreferrer"
-                className="hover:text-primary-500 duration-200 transition-colors ease-in-out"
+                className="font-bold text-primary-500 hover:text-primary-400 duration-200 transition-colors ease-in-out"
               >
-                NextJS
+                SneakArts
               </a>{" "}
-              Boilerplate by{" "}
-              <a
-                href="https://twitter.com/weetrax"
-                target={"_blank"}
-                rel="noreferrer"
-                className="text-primary-500 hover:text-primary-400 cursor-pointer focus:outline-none"
-              >
-                @weetrax
-              </a>
+              Marketplace
             </p>
           </li>
         </ul>

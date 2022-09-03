@@ -15,7 +15,7 @@ type NavbarProps = {
 
 const navigation = [
   { name: "Home", href: routes.home },
-  { name: "Portfolio", href: routes.portfolio },
+  { name: "Artists", href: routes.artists },
 ];
 
 const Navbar: React.FC<NavbarProps> = () => {
