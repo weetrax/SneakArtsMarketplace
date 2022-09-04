@@ -1,16 +1,21 @@
 import type { NextPage } from "next";
 import Head from "next/head";
+import Link from "next/link";
 import Script from "next/script";
 import { useEffect, useState } from "react";
 import Container from "../components/_Layout/Container";
+import { routes } from "../routes";
 
 const Home: NextPage = () => {
-  const [mounted, setMounted] = useState(false);
   useEffect(() => {
-    setMounted(true);
+    const script = document.createElement("script");
+    script.src = "/assets/js/main-globe.js";
+    script.async = true;
+    document.body.appendChild(script);
+    return () => {
+      document.body.removeChild(script);
+    };
   }, []);
-
-  if (!mounted) return null;
 
   return (
     <div>
@@ -27,44 +32,114 @@ const Home: NextPage = () => {
       <Script defer={true} src="/assets/js/orbit-controls.js"></Script>
       <Script defer={true} src="/assets/js/globe.js"></Script>
       */}
-      <Script defer={true} src="/assets/js/main-globe.js"></Script>
-
-      <div className="my-8">
-        <section className="min-h-[450px]">
+      <div>
+        <section className="min-h-[500px] flex items-center justify-center">
           <Container>
-            <div
-              className="movable absolute top-20 flex items-center justify-center w-full -right-[45%]"
-              id="globe"
-            >
-              <canvas className="scale-125" width="508" height="435"></canvas>
+            <div className="movable blur-[2px]" id="globe">
+              <canvas className="mx-auto" width="508" height="435"></canvas>
             </div>
-            <div className="mt-[100px] md:mt-[120px] relative z-10 rounded-lg w-4/5">
+          </Container>
+        </section>
+        <section className="h-[400px] -mt-[350px]">
+          <Container>
+            <div className="relative z-10 rounded-lg w-4/5 mx-auto text-center">
               <h1 className="font-bold text-4xl sm:text-5xl lg:text-6xl">
-                Trouver les <span className="title-gradient">créateurs</span>{" "}
-                idéal pour la{" "}
-                <span className="title-gradient">personnalisation</span> de vos
-                sneakers avec la{" "}
-                <span className="title-gradient">Marketplace SneakArts</span>
+                Trouve ton <span className="title-gradient">créateur</span>{" "}
+                idéal pour tes <span className="">personnalisations</span> avec
+                la <span className="title-gradient">Marketplace SneakArts</span>
               </h1>
             </div>
           </Container>
         </section>
+        <svg
+          width="16"
+          height="49"
+          viewBox="0 0 16 49"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          className="mx-auto featured-page-header-arrow relative"
+        >
+          <path
+            opacity="0.5"
+            d="M7.2929 48.7071C7.68342 49.0976 8.31658 49.0976 8.70711 48.7071L15.0711 42.3431C15.4616 41.9526 15.4616 41.3195 15.0711 40.9289C14.6805 40.5384 14.0474 40.5384 13.6569 40.9289L8 46.5858L2.34315 40.9289C1.95262 40.5384 1.31946 40.5384 0.928934 40.9289C0.53841 41.3195 0.53841 41.9526 0.928934 42.3431L7.2929 48.7071ZM7 4.37114e-08L7 48L9 48L9 -4.37114e-08L7 4.37114e-08Z"
+            fill="#596380"
+          ></path>
+        </svg>
         <section>
-          <div className="bg-white">
-            <Container>
-              <div className="grid grid-cols-2 py-4 gap-4">
-                <div className="col-span-2 md:col-span-1">
-                  <h2 className="text-2xl font-semibold">
-                    Chaussures, skateboard, pecorine, <br /> trouvez l{"'"}
-                    artiste qu{"'"}il vous faut!
-                  </h2>
+          <Container>
+            <div className="flex flex-col gap-8">
+              <div className="grid grid-cols-2 gap-2 items-center my-4">
+                <div className="col-span-2 md:col-span-1 text-center md:text-right pl-0 md:pl-16 order-2 md:order-1">
+                  <div className="text-xs title-gradient font-extrabold">
+                    1.
+                  </div>
+                  <div className="text-3xl md:text-4xl font-extrabold title-gradient mb-4">
+                    Verified Artists
+                  </div>
+                  <p>
+                    Technology unleashes creativity. The boundary to what’s
+                    possible is no longer physical. The measure of an artist’s
+                    craft is their ability to dream.
+                  </p>
                 </div>
-                <div className="col-span-2 md:col-span-1">
-                  <img className="max-h-52" src="/assets/img/nike.png"></img>
+                <div className="col-span-2 md:col-span-1 flex justify-center md:justify-start order-1 md:order-2">
+                  <img
+                    className="max-h-[400px]"
+                    src="https://inspire.art/static/media/kickstart-digital-art.167bd403.png"
+                  ></img>
                 </div>
               </div>
-            </Container>
-          </div>
+              <div className="grid grid-cols-2 gap-2 items-center">
+                <div className="col-span-2 md:col-span-1 flex justify-center md:justify-end">
+                  <img
+                    className="max-h-[400px]"
+                    src="https://inspire.art/static/media/kickstart-web3-culture.817fe8d3.png"
+                  ></img>
+                </div>
+                <div className="col-span-2 md:col-span-1 text-center md:text-left pr-0 md:pr-16">
+                  <div className="text-xs title-gradient font-extrabold">
+                    2.
+                  </div>
+                  <div className="text-3xl md:text-4xl font-extrabold title-gradient mb-4">
+                    High Quality
+                  </div>
+                  <p>
+                    Technology unleashes creativity. The boundary to what’s
+                    possible is no longer physical. The measure of an artist’s
+                    craft is their ability to dream.
+                  </p>
+                </div>
+              </div>
+              <div className="grid grid-cols-2 gap-2 items-center">
+                <div className="col-span-2 md:col-span-1 text-center md:text-right pl-0 md:pl-16 order-2 md:order-1">
+                  <div className="text-xs title-gradient font-extrabold">
+                    3.
+                  </div>
+                  <div className="text-3xl md:text-4xl font-extrabold title-gradient mb-4">
+                    A New Value
+                  </div>
+                  <p>
+                    Technology unleashes creativity. The boundary to what’s
+                    possible is no longer physical. The measure of an artist’s
+                    craft is their ability to dream.
+                  </p>
+                </div>
+                <div className="col-span-2 md:col-span-1 flex justify-center md:justify-start order-1 md:order-2">
+                  <img
+                    className="max-h-[400px]"
+                    src="https://inspire.art/static/media/kickstart-new-value.4ca3b6b2.png"
+                  ></img>
+                </div>
+              </div>
+            </div>
+            <div className="text-center my-12">
+              <Link href={routes.artists}>
+                <a className="rounded-full px-8 py-3 text-white bg-primary-500 hover:bg-primary-400 duration-200 transition-all ease-in-out">
+                  Find an artist
+                </a>
+              </Link>
+            </div>
+          </Container>
         </section>
       </div>
     </div>
