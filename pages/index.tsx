@@ -27,16 +27,15 @@ const Home: NextPage = () => {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      {/*
-      <Script src="/assets/js/threejs.js"></Script>
-      <Script defer={true} src="/assets/js/orbit-controls.js"></Script>
-      <Script defer={true} src="/assets/js/globe.js"></Script>
-      */}
       <div>
-        <section className="min-h-[500px] flex items-center justify-center">
+        <section className="min-h-[500px] flex items-center justify-center overflow-hidden">
           <Container>
-            <div className="movable blur-[2px]" id="globe">
-              <canvas className="mx-auto" width="508" height="435"></canvas>
+            <div className="movable blur-[1px] opacity-50" id="globe">
+              <canvas
+                className="mx-auto scale-150"
+                width="508"
+                height="435"
+              ></canvas>
             </div>
           </Container>
         </section>
@@ -74,7 +73,7 @@ const Home: NextPage = () => {
                     1.
                   </div>
                   <div className="text-3xl md:text-4xl font-extrabold title-gradient mb-4">
-                    Verified Artists
+                    Artistes vérifiés
                   </div>
                   <p>
                     Technology unleashes creativity. The boundary to what’s
@@ -84,16 +83,16 @@ const Home: NextPage = () => {
                 </div>
                 <div className="col-span-2 md:col-span-1 flex justify-center md:justify-start order-1 md:order-2">
                   <img
-                    className="max-h-[400px]"
-                    src="https://inspire.art/static/media/kickstart-digital-art.167bd403.png"
+                    className="max-h-[180px] md:max-h-[250px] pl-0 md:pl-8"
+                    src="/assets/img/check.png"
                   ></img>
                 </div>
               </div>
               <div className="grid grid-cols-2 gap-2 items-center">
                 <div className="col-span-2 md:col-span-1 flex justify-center md:justify-end">
                   <img
-                    className="max-h-[400px]"
-                    src="https://inspire.art/static/media/kickstart-web3-culture.817fe8d3.png"
+                    className="max-h-[180px] md:max-h-[250px] pr-0 md:pr-8"
+                    src="/assets/img/paint.png"
                   ></img>
                 </div>
                 <div className="col-span-2 md:col-span-1 text-center md:text-left pr-0 md:pr-16">
@@ -101,7 +100,7 @@ const Home: NextPage = () => {
                     2.
                   </div>
                   <div className="text-3xl md:text-4xl font-extrabold title-gradient mb-4">
-                    High Quality
+                    Peinture haute qualité
                   </div>
                   <p>
                     Technology unleashes creativity. The boundary to what’s
@@ -116,7 +115,7 @@ const Home: NextPage = () => {
                     3.
                   </div>
                   <div className="text-3xl md:text-4xl font-extrabold title-gradient mb-4">
-                    A New Value
+                    Créations originales
                   </div>
                   <p>
                     Technology unleashes creativity. The boundary to what’s
@@ -126,18 +125,25 @@ const Home: NextPage = () => {
                 </div>
                 <div className="col-span-2 md:col-span-1 flex justify-center md:justify-start order-1 md:order-2">
                   <img
-                    className="max-h-[400px]"
-                    src="https://inspire.art/static/media/kickstart-new-value.4ca3b6b2.png"
+                    className="max-h-[180px] md:max-h-[250px] pl-0 md:pl-8"
+                    src="/assets/img/bulb.png"
                   ></img>
                 </div>
               </div>
             </div>
-            <div className="text-center my-12">
+            <div className="flex justify-center items-center gap-4 my-12">
               <Link href={routes.artists}>
-                <a className="rounded-full px-8 py-3 text-white bg-primary-500 hover:bg-primary-400 duration-200 transition-all ease-in-out">
+                <a className="rounded-full px-8 py-3 text-white border border-primary-500 bg-primary-500 hover:bg-primary-400 duration-200 transition-all ease-in-out">
                   Find an artist
                 </a>
               </Link>
+              <a
+                href="https://sneakarts.com/fr/"
+                rel="noreferrer noopener"
+                className="rounded-full px-8 py-3 text-primary-500 hover:text-white border border-primary-500 hover:bg-primary-400 duration-200 transition-all ease-in-out"
+              >
+                Buy a kit
+              </a>
             </div>
           </Container>
         </section>
