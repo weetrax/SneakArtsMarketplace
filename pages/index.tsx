@@ -134,7 +134,7 @@ const Home: NextPage = () => {
             <div className="flex justify-center items-center gap-4 my-12">
               <Link href={routes.artists}>
                 <a className="rounded-full px-8 py-3 text-white border border-primary-500 bg-primary-500 hover:bg-primary-400 duration-200 transition-all ease-in-out">
-                  Find an artist
+                  Trouver un artiste
                 </a>
               </Link>
               <a
@@ -142,7 +142,7 @@ const Home: NextPage = () => {
                 rel="noreferrer noopener"
                 className="rounded-full px-8 py-3 text-primary-500 hover:text-white border border-primary-500 hover:bg-primary-400 duration-200 transition-all ease-in-out"
               >
-                Buy a kit
+                Acheter un kit
               </a>
             </div>
           </Container>
