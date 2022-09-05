@@ -42,14 +42,30 @@ const Home: NextPage = () => {
         <section className="h-[400px] -mt-[350px]">
           <Container>
             <div className="relative z-10 rounded-lg w-4/5 mx-auto text-center">
-              <h1 className="font-bold text-4xl sm:text-5xl lg:text-6xl">
-                Trouve ton <span className="title-gradient">créateur</span>{" "}
-                idéal pour tes <span className="">personnalisations</span> avec
-                la <span className="title-gradient">Marketplace SneakArts</span>
+              <h1
+                className="font-bold text-4xl sm:text-5xl lg:text-6xl"
+                style={{ textShadow: "6px 4px 7px rgb(93 91 254 / 50%)" }}
+              >
+                Trouve <span className="title-gradient">l'Artiste</span> idéal
+                pour tes <span className="title-gradient">customisations</span>
               </h1>
             </div>
           </Container>
         </section>
+        <div className="flex justify-center items-center gap-4 my-12">
+          <Link href={routes.sellers}>
+            <a className="rounded-full px-8 py-3 text-white border border-primary-500 bg-primary-500 hover:bg-primary-400 duration-200 transition-all ease-in-out">
+              Trouver un artiste
+            </a>
+          </Link>
+          <a
+            href="https://sneakarts.com/fr/"
+            rel="noreferrer noopener"
+            className="rounded-full px-8 py-3 text-primary-500 hover:text-white border border-primary-500 hover:bg-primary-400 duration-200 transition-all ease-in-out"
+          >
+            Acheter un kit
+          </a>
+        </div>
         <svg
           width="16"
           height="49"
@@ -130,20 +146,6 @@ const Home: NextPage = () => {
                   ></img>
                 </div>
               </div>
-            </div>
-            <div className="flex justify-center items-center gap-4 my-12">
-              <Link href={routes.artists}>
-                <a className="rounded-full px-8 py-3 text-white border border-primary-500 bg-primary-500 hover:bg-primary-400 duration-200 transition-all ease-in-out">
-                  Trouver un artiste
-                </a>
-              </Link>
-              <a
-                href="https://sneakarts.com/fr/"
-                rel="noreferrer noopener"
-                className="rounded-full px-8 py-3 text-primary-500 hover:text-white border border-primary-500 hover:bg-primary-400 duration-200 transition-all ease-in-out"
-              >
-                Acheter un kit
-              </a>
             </div>
           </Container>
         </section>

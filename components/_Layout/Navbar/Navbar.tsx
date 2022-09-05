@@ -15,7 +15,7 @@ type NavbarProps = {
 
 const navigation = [
   { name: "Home", href: routes.home },
-  { name: "Artists", href: routes.artists },
+  { name: "Artistes", href: routes.sellers },
 ];
 
 const Navbar: React.FC<NavbarProps> = () => {
@@ -45,13 +45,23 @@ const Navbar: React.FC<NavbarProps> = () => {
               <div className="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
                 <div className="flex-shrink-0 flex items-center">
                   <img
-                    className="block lg:hidden h-8 w-auto"
-                    src="/assets/img/logo.svg"
+                    className="block dark:hidden lg:hidden h-8 w-auto"
+                    src="http://sneakarts.com/img/logo.png"
                     alt="Workflow"
                   />
                   <img
-                    className="hidden lg:block h-8 w-auto"
-                    src="/assets/img/logo.svg"
+                    className="hidden dark:hidden lg:block h-8 w-auto"
+                    src="http://sneakarts.com/img/logo.png"
+                    alt="Workflow"
+                  />
+                  <img
+                    className="hidden dark:block dark:lg:hidden h-8 w-auto"
+                    src="http://sneakarts.com/img/logoBlanc.png"
+                    alt="Workflow"
+                  />
+                  <img
+                    className="hidden dark:hidden dark:lg:block h-8 w-auto"
+                    src="http://sneakarts.com/img/logoBlanc.png"
                     alt="Workflow"
                   />
                 </div>
