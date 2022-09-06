@@ -46,8 +46,9 @@ const Home: NextPage = () => {
                 className="font-bold text-4xl sm:text-5xl lg:text-6xl"
                 style={{ textShadow: "6px 4px 7px rgb(93 91 254 / 50%)" }}
               >
-                Trouve <span className="title-gradient">l'Artiste</span> idéal
-                pour tes <span className="title-gradient">customisations</span>
+                Trouve <span className="title-gradient">l{"'"}Artiste</span>{" "}
+                idéal pour tes{" "}
+                <span className="title-gradient">customisations</span>
               </h1>
             </div>
           </Container>

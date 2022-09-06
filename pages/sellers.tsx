@@ -40,7 +40,7 @@ const Home: NextPage = () => {
             <div className="flex items-center justify-center">
               <CarouselCoverflow
                 items={seller.map((a, i) => {
-                  return <SellerItem seller={a} />;
+                  return <SellerItem key={`seller_${i}`} seller={a} />;
                 })}
               ></CarouselCoverflow>
             </div>
@@ -69,8 +69,8 @@ const Home: NextPage = () => {
           </div>
           {copyArtist.length > 0 ? (
             <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 py-4">
-              {copyArtist.map((s, index) => {
-                return <SellerItem seller={s}></SellerItem>;
+              {copyArtist.map((s, i) => {
+                return <SellerItem key={`seller_${i}`} seller={s}></SellerItem>;
               })}
             </div>
           ) : (
@@ -96,11 +96,11 @@ const Home: NextPage = () => {
                   rx="18"
                   fill="#fff"
                   stroke="#E1E4E5"
-                  stroke-width="4"
+                  strokeWidth="4"
                 />
                 <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
+                  fillRule="evenodd"
+                  clipRule="evenodd"
                   d="M252 237.701v4.703c0 2.597 2.079 4.704 4.641 4.704h55.699c2.562 0 4.641-2.107 4.641-4.704v-4.778c0-14.233-16.05-23.48-32.49-23.48-16.441 0-32.491 9.252-32.491 23.48m20.837-64.799c-6.436 6.436-6.436 16.871 0 23.307 6.436 6.437 16.871 6.437 23.308 0 6.436-6.436 6.436-16.871 0-23.307-6.437-6.436-16.872-6.436-23.308 0z"
                   fill="#cbd5e1"
                 />
@@ -121,8 +121,8 @@ const Home: NextPage = () => {
                   fill="#E1E4E5"
                 />
                 <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
+                  fillRule="evenodd"
+                  clipRule="evenodd"
                   d="M252 389.701v4.703c0 2.597 2.079 4.704 4.641 4.704h55.699c2.562 0 4.641-2.107 4.641-4.704v-4.778c0-14.233-16.05-23.48-32.49-23.48-16.441 0-32.491 9.252-32.491 23.48m20.837-64.799c-6.436 6.436-6.436 16.871 0 23.307 6.436 6.437 16.871 6.437 23.308 0 6.436-6.436 6.436-16.871 0-23.307-6.437-6.436-16.872-6.436-23.308 0z"
                   fill="#cbd5e1"
                 />
@@ -143,8 +143,8 @@ const Home: NextPage = () => {
                   fill="#E1E4E5"
                 />
                 <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
+                  fillRule="evenodd"
+                  clipRule="evenodd"
                   d="M377 237.701v4.703c0 2.597 2.079 4.704 4.641 4.704h55.699c2.562 0 4.641-2.107 4.641-4.704v-4.778c0-14.233-16.05-23.48-32.49-23.48-16.441 0-32.491 9.252-32.491 23.48m20.837-64.799c-6.436 6.436-6.436 16.871 0 23.307 6.436 6.437 16.871 6.437 23.308 0 6.436-6.436 6.436-16.871 0-23.307-6.437-6.436-16.872-6.436-23.308 0z"
                   fill="#cbd5e1"
                 />
@@ -165,8 +165,8 @@ const Home: NextPage = () => {
                   fill="#E1E4E5"
                 />
                 <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
+                  fillRule="evenodd"
+                  clipRule="evenodd"
                   d="M377 389.701v4.703c0 2.597 2.079 4.704 4.641 4.704h55.699c2.562 0 4.641-2.107 4.641-4.704v-4.778c0-14.233-16.05-23.48-32.49-23.48-16.441 0-32.491 9.252-32.491 23.48m20.837-64.799c-6.436 6.436-6.436 16.871 0 23.307 6.436 6.437 16.871 6.437 23.308 0 6.436-6.436 6.436-16.871 0-23.307-6.437-6.436-16.872-6.436-23.308 0z"
                   fill="#cbd5e1"
                 />
@@ -187,8 +187,8 @@ const Home: NextPage = () => {
                   fill="#E1E4E5"
                 />
                 <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
+                  fillRule="evenodd"
+                  clipRule="evenodd"
                   d="M502 237.701v4.703c0 2.596 2.079 4.704 4.641 4.704h55.699c2.562 0 4.641-2.108 4.641-4.704v-4.778c0-14.233-16.05-23.48-32.49-23.48-16.441 0-32.491 9.252-32.491 23.48m0 152.075v4.703c0 2.596 2.079 4.704 4.641 4.704h55.699c2.562 0 4.641-2.108 4.641-4.704v-4.778c0-14.233-16.05-23.48-32.49-23.48-16.441 0-32.491 9.252-32.491 23.48m20.837-216.799c-6.436 6.436-6.436 16.871 0 23.308 6.436 6.436 16.871 6.436 23.308 0 6.436-6.437 6.436-16.872 0-23.308-6.437-6.436-16.872-6.436-23.308 0zm0 152c-6.436 6.436-6.436 16.871 0 23.308 6.436 6.436 16.871 6.436 23.308 0 6.436-6.437 6.436-16.872 0-23.308-6.437-6.436-16.872-6.436-23.308 0z"
                   fill="#cbd5e1"
                 />

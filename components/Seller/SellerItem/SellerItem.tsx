@@ -1,8 +1,8 @@
 import * as React from "react";
+import Link from "next/link";
 import PropTypes from "prop-types";
 import { Seller } from "../../../types";
 import { LightningBoltIcon, ShoppingBagIcon } from "@heroicons/react/outline";
-import Link from "next/link";
 
 type sellerItemProps = {
   seller: Seller;
