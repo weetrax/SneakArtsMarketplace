@@ -45,7 +45,7 @@ const Home: NextPage = () => {
               ></CarouselCoverflow>
             </div>
           </div>
-          <div className="flex justify-between">
+          <div className="flex flex-wrap items-end justify-between">
             <h2 className="text-center md:text-left text-3xl md:text-4xl font-extrabold title-gradient mb-8">
               Artistes
             </h2>
@@ -60,7 +60,7 @@ const Home: NextPage = () => {
                 <input
                   type="text"
                   onChange={handleChangeSearch}
-                  className="block bg-[rgba(0,0,0,0)] p-1 min-w-[300px] pl-10 w-full text-sm border-b border-gray-300 dark:border-dark-400 focus:border-primary-500 focus:outline-none"
+                  className="block bg-[rgba(0,0,0,0)] p-1 w-full pl-10 text-sm border-b border-gray-300 dark:border-dark-400 focus:border-primary-500 focus:outline-none"
                   placeholder="Rechercher"
                   required
                 ></input>

@@ -16,8 +16,11 @@ const CarouselCoverflow: React.FC<CarouselCoverflowProps> = ({ items }) => {
       centeredSlides={true}
       slidesPerView={3}
       breakpoints={{
-        500: {
+        316: {
           slidesPerView: 1,
+        },
+        576: {
+          slidesPerView: 2,
         },
         700: {
           slidesPerView: 2,
