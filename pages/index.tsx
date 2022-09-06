@@ -29,7 +29,7 @@ const Home: NextPage = () => {
       <div>
         <section className="min-h-screen-nav flex items-center justify-center overflow-hidden">
           <Container>
-            <div className="movable blur-[1px] opacity-50" id="globe">
+            <div className="movable blur-[1px] opacity-40" id="globe">
               <canvas
                 className="mx-auto scale-150"
                 width="508"
@@ -38,7 +38,7 @@ const Home: NextPage = () => {
             </div>
           </Container>
         </section>
-        <section className="h-[400px] -mt-[400px]">
+        <section className="h-[400px] -mt-[calc(50vh+64px)]">
           <Container>
             <div className="relative z-10 rounded-lg w-4/5 mx-auto text-center">
               <h1
