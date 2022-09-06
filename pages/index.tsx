@@ -1,8 +1,7 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
-import Script from "next/script";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import Container from "../components/_Layout/Container";
 import { routes } from "../routes";
 
@@ -28,7 +27,7 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div>
-        <section className="min-h-[500px] flex items-center justify-center overflow-hidden">
+        <section className="min-h-screen-nav flex items-center justify-center overflow-hidden">
           <Container>
             <div className="movable blur-[1px] opacity-50" id="globe">
               <canvas
@@ -39,7 +38,7 @@ const Home: NextPage = () => {
             </div>
           </Container>
         </section>
-        <section className="h-[400px] -mt-[350px]">
+        <section className="h-[400px] -mt-[400px]">
           <Container>
             <div className="relative z-10 rounded-lg w-4/5 mx-auto text-center">
               <h1
@@ -84,7 +83,7 @@ const Home: NextPage = () => {
         <section>
           <Container>
             <div className="flex flex-col gap-8">
-              <div className="grid grid-cols-2 gap-2 items-center my-4">
+              <div className="grid grid-cols-2 gap-8 items-center my-4">
                 <div className="col-span-2 md:col-span-1 text-center md:text-right pl-0 md:pl-16 order-2 md:order-1">
                   <div className="text-xs title-gradient font-extrabold">
                     1.
@@ -105,7 +104,7 @@ const Home: NextPage = () => {
                   ></img>
                 </div>
               </div>
-              <div className="grid grid-cols-2 gap-2 items-center">
+              <div className="grid grid-cols-2 gap-8 items-center">
                 <div className="col-span-2 md:col-span-1 flex justify-center md:justify-end">
                   <img
                     className="max-h-[180px] md:max-h-[250px] pr-0 md:pr-8"
@@ -126,7 +125,7 @@ const Home: NextPage = () => {
                   </p>
                 </div>
               </div>
-              <div className="grid grid-cols-2 gap-2 items-center">
+              <div className="grid grid-cols-2 gap-8 items-center">
                 <div className="col-span-2 md:col-span-1 text-center md:text-right pl-0 md:pl-16 order-2 md:order-1">
                   <div className="text-xs title-gradient font-extrabold">
                     3.

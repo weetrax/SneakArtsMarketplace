@@ -3,6 +3,10 @@
 @tailwind components;
 @tailwind utilities;
 
+.min-h-screen-nav {
+  min-height: calc(100vh - 64px);
+}
+
 .title-gradient {
   background: linear-gradient(90deg, #61dada, #7eaaff 45%, #a67cff);
   -webkit-background-clip: text;
