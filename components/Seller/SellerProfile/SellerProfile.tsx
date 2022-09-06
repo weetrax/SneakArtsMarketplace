@@ -43,6 +43,8 @@ const SellerProfile: React.FC<SellerProfileProps> = ({
                 </span>
                 <a
                   href={seller?.sellerSocial}
+                  rel="noreferrer noopener"
+                  target={"_blank"}
                   className="items-center justify-center hover:text-primary-500 duration-200 transition-all ease-in-out"
                 >
                   <GlobeAltIcon className="w-6 h-6" />
@@ -51,7 +53,7 @@ const SellerProfile: React.FC<SellerProfileProps> = ({
             </div>
           </div>
           <div className="font-semibold mb-4">{seller?.sellerDescription}</div>
-          <div className="flex gap-2">
+          <div className="flex gap-2 justify-start items-center overflow-auto max-w-full">
             <SellerProductTags
               seller={seller}
               activeTag={activeTag}
