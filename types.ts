@@ -2,11 +2,11 @@ import { ParsedUrlQuery } from "querystring";
 
 export type Seller = {
   sellerId: string;
-  sellerLogo: string;
-  sellerDescription: string;
   sellerFirstName: string;
   sellerUserName: string;
   sellerEmail: string;
+  sellerLogo: string;
+  sellerDescription: string;
   sellerAddress: string;
   sellerCity: string;
   sellerCountry: string;

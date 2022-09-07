@@ -41,8 +41,7 @@ const Home: NextPage = () => {
         <section className="h-[400px] -mt-[calc(50vh+64px)]">
           <Container>
             <div className="relative z-10 rounded-lg w-4/5 mx-auto text-center">
-              <h1
-                className="font-bold text-4xl sm:text-5xl lg:text-6xl">
+              <h1 className="font-bold text-4xl sm:text-5xl lg:text-6xl">
                 Trouve <span className="title-gradient">l{"'"}Artiste</span>{" "}
                 idéal pour tes{" "}
                 <span className="title-gradient">customisations</span>
@@ -58,7 +57,8 @@ const Home: NextPage = () => {
           </Link>
           <a
             href="https://sneakarts.com/fr/"
-            rel="noreferrer noopener"
+            target={"_blank"}
+            rel="noreferer nooperer"
             className="rounded-full px-8 py-3 text-primary-500 hover:text-white border border-primary-500 hover:bg-primary-400 duration-200 transition-all ease-in-out"
           >
             Acheter un kit

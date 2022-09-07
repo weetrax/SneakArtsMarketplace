@@ -1,10 +1,10 @@
-import * as React from 'react';
-import Link from 'next/link';
-import ProductTags from '../../Product/ProductTags';
-import PropTypes from 'prop-types';
-import ScrollContainer from 'react-indiana-drag-scroll';
-import { LightningBoltIcon, ShoppingBagIcon } from '@heroicons/react/outline';
-import { Seller } from '../../../types';
+import * as React from "react";
+import Link from "next/link";
+import ProductTags from "../../Product/ProductTags";
+import PropTypes from "prop-types";
+import ScrollContainer from "react-indiana-drag-scroll";
+import { LightningBoltIcon, ShoppingBagIcon } from "@heroicons/react/outline";
+import { Seller } from "../../../types";
 
 type sellerItemProps = {
   seller: Seller;
@@ -30,7 +30,10 @@ const SellerItem: React.FC<sellerItemProps> = ({ seller }) => {
           </dd>
           <dt className="sr-only">Tags</dt>
           <dd className="mt-3 flex justify-center items-center gap-1">
-            <ScrollContainer nativeMobileScroll={true} className="cursor-grab overflow-auto max-w-[200px]">
+            <ScrollContainer
+              nativeMobileScroll={true}
+              className="cursor-grab overflow-auto max-w-[200px]"
+            >
               <ProductTags products={seller.sellerProducts} />
             </ScrollContainer>
           </dd>
@@ -49,6 +52,8 @@ const SellerItem: React.FC<sellerItemProps> = ({ seller }) => {
           <div className="-ml-px w-0 flex-1 flex">
             <a
               href={`https://sneakarts.com/fr/seller/${seller.sellerId}`}
+              target={"_blank"}
+              rel="noreferer nooperer"
               className="relative w-0 flex-1 inline-flex items-center justify-center py-4 text-sm font-medium rounded-br-lg hover:text-primary-500 duration-200 transition-all ease-in-out"
             >
               <ShoppingBagIcon className="w-5 h-5" aria-hidden="true" />

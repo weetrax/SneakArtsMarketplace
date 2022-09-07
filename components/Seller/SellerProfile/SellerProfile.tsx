@@ -1,10 +1,10 @@
-import * as React from 'react';
-import ProductTags from '../../Product/ProductTags';
-import PropTypes from 'prop-types';
-import ScrollContainer from 'react-indiana-drag-scroll';
+import * as React from "react";
+import ProductTags from "../../Product/ProductTags";
+import PropTypes from "prop-types";
+import ScrollContainer from "react-indiana-drag-scroll";
 import ProductItem from "../../Product/ProductItem";
-import { GlobeAltIcon } from '@heroicons/react/outline';
-import { Product, Seller } from '../../../types';
+import { GlobeAltIcon } from "@heroicons/react/outline";
+import { Product, Seller } from "../../../types";
 
 type SellerProfileProps = {
   seller: Seller;
@@ -43,8 +43,8 @@ const SellerProfile: React.FC<SellerProfileProps> = ({
                 </span>
                 <a
                   href={seller?.sellerSocial}
-                  rel="noreferrer noopener"
                   target={"_blank"}
+                  rel="noreferer nooperer"
                   className="items-center justify-center hover:text-primary-500 duration-200 transition-all ease-in-out"
                 >
                   <GlobeAltIcon className="w-6 h-6" />

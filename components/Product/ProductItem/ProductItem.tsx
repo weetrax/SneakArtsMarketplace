@@ -35,6 +35,8 @@ const ProductItem: React.FC<ProductItemProps> = ({ product }) => {
             <a
               className="cursor-pointer text-sm w-full text-white text-center rounded-full py-2 px-3 bg-primary-500 hover:bg-primary-400 transition-all duration-200 ease-in-out"
               href={product.productUrl}
+              target={"_blank"}
+              rel="noreferer nooperer"
             >
               Commander
             </a>
@@ -42,7 +44,7 @@ const ProductItem: React.FC<ProductItemProps> = ({ product }) => {
         </div>
       </div>
     </div>
-  )
+  );
 };
 
 ProductItem.propTypes = {
