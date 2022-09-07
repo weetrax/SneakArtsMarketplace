@@ -25,7 +25,7 @@ const Navbar: React.FC<NavbarProps> = () => {
   return (
     <Disclosure
       as="nav"
-      className="bg-white dark:bg-dark-600 backdrop-filter backdrop-blur bg-opacity-70 items-center sticky top-0 shadow-sm z-20"
+      className="bg-white/70 dark:bg-dark-600/70 backdrop-filter backdrop-blur items-center sticky top-0 z-20"
     >
       {({ open }) => (
         <>

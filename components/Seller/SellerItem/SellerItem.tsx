@@ -1,8 +1,10 @@
-import * as React from "react";
-import Link from "next/link";
-import PropTypes from "prop-types";
-import { Seller } from "../../../types";
-import { LightningBoltIcon, ShoppingBagIcon } from "@heroicons/react/outline";
+import * as React from 'react';
+import Link from 'next/link';
+import ProductTags from '../../Product/ProductTags';
+import PropTypes from 'prop-types';
+import ScrollContainer from 'react-indiana-drag-scroll';
+import { LightningBoltIcon, ShoppingBagIcon } from '@heroicons/react/outline';
+import { Seller } from '../../../types';
 
 type sellerItemProps = {
   seller: Seller;
@@ -28,20 +30,9 @@ const SellerItem: React.FC<sellerItemProps> = ({ seller }) => {
           </dd>
           <dt className="sr-only">Tags</dt>
           <dd className="mt-3 flex justify-center items-center gap-1">
-            <div className="flex gap-2 justify-start items-center overflow-auto max-w-[200px]">
-              {seller.sellerProducts
-                .map((x) => x.productReference.split(","))
-                .map((tag, index) => {
-                  return (
-                    <span
-                      key={index}
-                      className="px-2 py-1 text-primary-800 text-xs font-medium bg-primary-100 rounded-full"
-                    >
-                      {tag}
-                    </span>
-                  );
-                })}
-            </div>
+            <ScrollContainer nativeMobileScroll={true} className="cursor-grab overflow-auto max-w-[200px]">
+              <ProductTags products={seller.sellerProducts} />
+            </ScrollContainer>
           </dd>
         </dl>
       </div>

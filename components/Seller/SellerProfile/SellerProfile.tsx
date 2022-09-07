@@ -1,10 +1,10 @@
-import * as React from "react";
-import PropTypes from "prop-types";
-import { Product, Seller } from "../../../types";
-import { GlobeAltIcon } from "@heroicons/react/outline";
-import SellerProduct, {
-  SellerProductTags,
-} from "../SellerProduct/SellerProduct";
+import * as React from 'react';
+import ProductTags from '../../Product/ProductTags';
+import PropTypes from 'prop-types';
+import ScrollContainer from 'react-indiana-drag-scroll';
+import ProductItem from "../../Product/ProductItem";
+import { GlobeAltIcon } from '@heroicons/react/outline';
+import { Product, Seller } from '../../../types';
 
 type SellerProfileProps = {
   seller: Seller;
@@ -52,16 +52,18 @@ const SellerProfile: React.FC<SellerProfileProps> = ({
               </div>
             </div>
           </div>
-          <div className="font-semibold mb-4">{seller?.sellerDescription}</div>
-          <div className="flex gap-2 justify-start items-center overflow-auto max-w-full">
-            <SellerProductTags
-              seller={seller}
-              activeTag={activeTag}
-              setActiveTag={setActiveTag}
-              allProducts={allProducts}
-              products={products}
-              setProducts={setProducts}
-            />
+          <div className="mb-6">{seller?.sellerDescription}</div>
+          <div className="scrollbar-hide flex gap-2 justify-start items-center overflow-auto max-w-full">
+            <ScrollContainer className="cursor-grab overflow-auto max-w-full">
+              <ProductTags
+                products={seller.sellerProducts}
+                clickable={true}
+                activeTag={activeTag}
+                setActiveTag={setActiveTag}
+                allProducts={allProducts}
+                setProducts={setProducts}
+              />
+            </ScrollContainer>
           </div>
         </div>
       </div>
@@ -71,7 +73,7 @@ const SellerProfile: React.FC<SellerProfileProps> = ({
         </div>
         <div className="my-4 grid grid-cols-12 flex-col gap-4">
           {products?.map((x, i) => {
-            return <SellerProduct key={i} product={x} />;
+            return <ProductItem key={i} product={x} />;
           })}
         </div>
       </div>

@@ -14,6 +14,15 @@
   -webkit-text-fill-color: transparent;
 }
 
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
 .icon {
   display: inline-block;
   color: #111;
