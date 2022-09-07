@@ -17,7 +17,7 @@ const Footer: React.FC<FooterProps> = () => {
               <a
                 href="https://sneakarts.com"
                 target={"_blank"}
-                rel="noreferer nooperer"
+                rel="noreferrer nooperer"
                 className="font-bold text-primary-500 hover:text-primary-400 duration-200 transition-colors ease-in-out"
               >
                 SneakArts

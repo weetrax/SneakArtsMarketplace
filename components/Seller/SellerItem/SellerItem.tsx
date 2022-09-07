@@ -53,7 +53,7 @@ const SellerItem: React.FC<sellerItemProps> = ({ seller }) => {
             <a
               href={`https://sneakarts.com/fr/seller/${seller.sellerId}`}
               target={"_blank"}
-              rel="noreferer nooperer"
+              rel="noreferrer nooperer"
               className="relative w-0 flex-1 inline-flex items-center justify-center py-4 text-sm font-medium rounded-br-lg hover:text-primary-500 duration-200 transition-all ease-in-out"
             >
               <ShoppingBagIcon className="w-5 h-5" aria-hidden="true" />

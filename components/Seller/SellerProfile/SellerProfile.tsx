@@ -5,6 +5,9 @@ import ScrollContainer from "react-indiana-drag-scroll";
 import ProductItem from "../../Product/ProductItem";
 import { GlobeAltIcon } from "@heroicons/react/outline";
 import { Product, Seller } from "../../../types";
+import dynamic from "next/dynamic";
+
+const LeafletMap = dynamic(() => import("../../LeafletMap"), { ssr: false });
 
 type SellerProfileProps = {
   seller: Seller;
@@ -25,7 +28,7 @@ const SellerProfile: React.FC<SellerProfileProps> = ({
 }) => {
   return (
     <div className="grid grid-cols-12 items-start justify-center gap-8">
-      <div className="col-span-12">
+      <div className="col-span-12 md:col-span-8 lg:col-span-9">
         <div className="text-center md:text-left text-3xl md:text-4xl font-extrabold title-gradient mb-8">
           Créateur
         </div>
@@ -44,7 +47,7 @@ const SellerProfile: React.FC<SellerProfileProps> = ({
                 <a
                   href={seller?.sellerSocial}
                   target={"_blank"}
-                  rel="noreferer nooperer"
+                  rel="noreferrer nooperer"
                   className="items-center justify-center hover:text-primary-500 duration-200 transition-all ease-in-out"
                 >
                   <GlobeAltIcon className="w-6 h-6" />
@@ -66,15 +69,25 @@ const SellerProfile: React.FC<SellerProfileProps> = ({
             </ScrollContainer>
           </div>
         </div>
-      </div>
-      <div className="col-span-12">
-        <div className="text-center md:text-left text-3xl md:text-4xl font-extrabold title-gradient mb-8">
-          Shop
+        <div className="mt-8">
+          <div className="text-center md:text-left text-3xl md:text-4xl font-extrabold title-gradient mb-8">
+            Shop
+          </div>
+          <div className="my-4 grid grid-cols-12 flex-col gap-4">
+            {products?.map((x, i) => {
+              return <ProductItem key={i} product={x} />;
+            })}
+          </div>
         </div>
-        <div className="my-4 grid grid-cols-12 flex-col gap-4">
-          {products?.map((x, i) => {
-            return <ProductItem key={i} product={x} />;
-          })}
+      </div>
+      <div className="col-span-12 md:col-span-4 lg:col-span-3">
+        <div className="text-center md:text-left text-3xl md:text-4xl font-extrabold title-gradient mb-8">
+          Localisation
+        </div>
+        <div className="w-full">
+          <LeafletMap
+            markers={[{ latlng: [51.505, -0.09], popup: <div>coucou</div> }]}
+          />
         </div>
       </div>
     </div>

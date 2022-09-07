@@ -58,7 +58,7 @@ const Home: NextPage = () => {
           <a
             href="https://sneakarts.com/fr/"
             target={"_blank"}
-            rel="noreferer nooperer"
+            rel="noreferrer nooperer"
             className="rounded-full px-8 py-3 text-primary-500 hover:text-white border border-primary-500 hover:bg-primary-400 duration-200 transition-all ease-in-out"
           >
             Acheter un kit

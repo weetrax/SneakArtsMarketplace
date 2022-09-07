@@ -32,3 +32,8 @@ export type Product = {
 export interface IParams extends ParsedUrlQuery {
   id: string;
 }
+
+export type MapMarker = {
+  latlng: [lat: number, lng: number];
+  popup: React.ReactNode;
+};
