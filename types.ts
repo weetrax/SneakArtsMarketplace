@@ -10,7 +10,6 @@ export type Seller = {
   sellerAddress: string;
   sellerCity: string;
   sellerCountry: string;
-  sellerZip: string;
   sellerLat: string;
   sellerLong: string;
   sellerSocial: string;
