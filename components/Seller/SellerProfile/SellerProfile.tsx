@@ -55,7 +55,7 @@ const SellerProfile: React.FC<SellerProfileProps> = ({
               </div>
             </div>
           </div>
-          <div className="mb-6">{seller?.sellerDescription}</div>
+          <div className="mb-6">{seller?.sellerBio}</div>
           <div className="scrollbar-hide flex gap-2 justify-start items-center overflow-auto max-w-full">
             <ScrollContainer className="cursor-grab overflow-auto max-w-full">
               <ProductTags

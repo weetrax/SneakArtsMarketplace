@@ -2,26 +2,27 @@ import { ParsedUrlQuery } from "querystring";
 
 export type Seller = {
   sellerId: string;
-  sellerFirstName: string;
+  sellerFirstLastName: string;
   sellerUserName: string;
   sellerEmail: string;
   sellerLogo: string;
-  sellerDescription: string;
+  sellerBio: string;
   sellerAddress: string;
   sellerCity: string;
   sellerCountry: string;
   sellerLat: string;
   sellerLong: string;
-  sellerSocial: string;
   sellerProducts: Product[];
+  sellerSocial?: string;
 };
 
 export type Product = {
   productID: string;
+  productName: string;
   productImage: string;
   productSummary: string;
   productDescription: string;
-  productQuantity: string;
+  productQty: string;
   productPrice: string;
   productCategory: string;
   productReference: string;

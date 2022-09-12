@@ -6,8 +6,8 @@ export const _sellers: Seller[] = [
     sellerId: "Seller 1",
     sellerEmail: "seller1@sneakert.com",
     sellerUserName: "JeanCule",
-    sellerFirstName: "Jean",
-    sellerDescription:
+    sellerFirstLastName: "Jean",
+    sellerBio:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer venenatis velit sed metus mattis tincidunt. Vestibulum metus magna, varius vitae lacus facilisis, imperdiet aliquam lectus.",
     sellerAddress: "1 rue des Pierres",
     sellerCity: "Cannes",
@@ -22,8 +22,8 @@ export const _sellers: Seller[] = [
     sellerId: "Seller 2",
     sellerEmail: "seller2@sneakert.com",
     sellerUserName: "MangeMerde",
-    sellerFirstName: "Mange",
-    sellerDescription:
+    sellerFirstLastName: "Mange",
+    sellerBio:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer venenatis velit sed metus mattis tincidunt. Vestibulum metus magna, varius vitae lacus facilisis, imperdiet aliquam lectus.",
     sellerAddress: "2 avenue ma Louche",
     sellerCity: "Paris",
@@ -38,8 +38,8 @@ export const _sellers: Seller[] = [
     sellerId: "Seller 3",
     sellerEmail: "seller3@sneakert.com",
     sellerUserName: "Noahnanas",
-    sellerFirstName: "Noah",
-    sellerDescription:
+    sellerFirstLastName: "Noah",
+    sellerBio:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer venenatis velit sed metus mattis tincidunt. Vestibulum metus magna, varius vitae lacus facilisis, imperdiet aliquam lectus.",
     sellerAddress: "3 rue des Pierres",
     sellerCity: "Cannes",

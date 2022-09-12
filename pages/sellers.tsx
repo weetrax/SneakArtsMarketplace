@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Head from "next/head";
 import type { NextPage } from "next";
 import { SearchIcon } from "@heroicons/react/outline";
@@ -8,10 +8,20 @@ import Container from "../components/_Layout/Container";
 import CarouselCoverflow from "../components/_Layout/CarouselCoverflow";
 import SellerItem from "../components/Seller/SellerItem";
 import { _sellers } from "../data/sellers";
+import { getSellers } from "../services/sneakartsApi";
+import { AxiosResponse } from "axios";
 
 const Home: NextPage = () => {
-  const [seller, setSeller] = useState<Seller[]>(_sellers);
-  const [copyArtist, setCopyArtist] = useState<Seller[]>(_sellers);
+  const [seller, setSeller] = useState<Seller[]>([]);
+
+  const [copyArtist, setCopyArtist] = useState<Seller[]>(seller);
+
+  useEffect(() => {
+    getSellers().then((response: AxiosResponse) => {
+      setSeller(response.data);
+    });
+  }, []);
+
   const handleChangeSearch = (e: ChangeEvent<HTMLInputElement>) => {
     const filteredSellers = [...seller].filter((x, i) =>
       x.sellerUserName
@@ -39,7 +49,7 @@ const Home: NextPage = () => {
             </h2>
             <div className="flex items-center justify-center">
               <CarouselCoverflow
-                items={seller.map((a, i) => {
+                items={seller?.map((a, i) => {
                   return <SellerItem key={`seller_${i}`} seller={a} />;
                 })}
               ></CarouselCoverflow>
