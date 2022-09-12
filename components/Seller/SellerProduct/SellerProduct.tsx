@@ -1,6 +1,7 @@
 import * as React from "react";
 import PropTypes from "prop-types";
 import { Product, Seller } from "../../../types";
+import isEmpty from "is-empty";
 
 type SellerProductProps = {
   product: Product;
@@ -21,7 +22,7 @@ const SellerProduct: React.FC<SellerProductProps> = ({ product }) => {
           </div>
           <div className="flex justify-between items-center">
             <div>Prix</div>
-            <div>{product.productPrice}€</div>
+            <div>{product.productPrice}</div>
           </div>
           <div className="flex justify-between items-center mb-8">
             <div>Tags</div>
@@ -79,8 +80,10 @@ export const SellerProductTags: React.FC<SellerProductTagsProps> = ({
       const products: Product[] = [];
       seller?.sellerProducts?.map((x) => {
         const productTags = x.productReference.split(",");
-        if (productTags.includes(v)) {
-          products.push(x);
+        if (!isEmpty(productTags)) {
+          if (productTags.includes(v)) {
+            products.push(x);
+          }
         }
       });
       setProducts(products);

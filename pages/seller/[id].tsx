@@ -8,11 +8,9 @@ import { IParams, Product, Seller } from "../../types";
 import { _sellers } from "../../data/sellers";
 import { BackspaceIcon } from "@heroicons/react/outline";
 import { routes } from "../../routes";
+import { getSellers } from "../../services/sneakartsApi";
 
-const Home: NextPage<{ id: string }> = ({ id }) => {
-  const [seller, setSeller] = useState<Seller | null>(
-    _sellers.find((x) => x.sellerId === id) ?? null
-  );
+const Home: NextPage<{ seller: Seller }> = ({ seller }) => {
   const [products, setProducts] = useState<Product[]>(
     seller?.sellerProducts ?? []
   );
@@ -55,9 +53,10 @@ const Home: NextPage<{ id: string }> = ({ id }) => {
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const arr: string[] = _sellers.map((x) => x.sellerId);
-  const paths = arr.map((id) => {
+  const { data } = await getSellers();
+  const paths = (data as Seller[]).map((seller: Seller) => {
     return {
-      params: { id },
+      params: { id: seller.sellerId },
     };
   });
   return { paths, fallback: false };
@@ -65,7 +64,10 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
 export const getStaticProps: GetStaticProps = async (context) => {
   const { id } = context.params as IParams;
-  const props = { id };
+  const { data } = await getSellers();
+  //TODO: Optimiser avec query qui query directement le seller avec l'id
+  const seller = (data as Seller[]).find((x) => x.sellerId === id);
+  const props = { seller };
   return { props };
 };
 

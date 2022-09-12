@@ -23,7 +23,7 @@ const ProductItem: React.FC<ProductItemProps> = ({ product }) => {
           </div>
           <div className="flex justify-between items-center">
             <div>Prix</div>
-            <div>{product.productPrice}€</div>
+            <div>{product.productPrice}</div>
           </div>
           <div className="flex justify-between items-center mb-8">
             <div>Tags</div>

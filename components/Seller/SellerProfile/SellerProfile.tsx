@@ -44,14 +44,16 @@ const SellerProfile: React.FC<SellerProfileProps> = ({
                 <span>
                   {seller?.sellerCountry}, {seller?.sellerCity} |{" "}
                 </span>
-                <a
-                  href={seller?.sellerSocial}
-                  target={"_blank"}
-                  rel="noreferrer nooperer"
-                  className="items-center justify-center hover:text-primary-500 duration-200 transition-all ease-in-out"
-                >
-                  <GlobeAltIcon className="w-6 h-6" />
-                </a>
+                {seller?.sellerSocial && (
+                  <a
+                    href={seller?.sellerSocial}
+                    target={"_blank"}
+                    rel="noreferrer nooperer"
+                    className="items-center justify-center hover:text-primary-500 duration-200 transition-all ease-in-out"
+                  >
+                    <GlobeAltIcon className="w-6 h-6" />
+                  </a>
+                )}
               </div>
             </div>
           </div>
@@ -80,7 +82,7 @@ const SellerProfile: React.FC<SellerProfileProps> = ({
           </div>
         </div>
       </div>
-      <div className="col-span-12 md:col-span-4 lg:col-span-3">
+      <div className="col-span-12 md:col-span-4 lg:col-span-3 hidden">
         <div className="text-center md:text-left text-3xl md:text-4xl font-extrabold title-gradient mb-8">
           Localisation
         </div>

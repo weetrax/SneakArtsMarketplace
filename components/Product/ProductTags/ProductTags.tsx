@@ -1,6 +1,7 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { Product } from '../../../types';
+import React from "react";
+import PropTypes from "prop-types";
+import { Product } from "../../../types";
+import isEmpty from "is-empty";
 
 type ProductTagsProps = {
   products: Product[];
@@ -19,7 +20,6 @@ const ProductTags: React.FC<ProductTagsProps> = ({
   allProducts,
   setProducts,
 }) => {
-
   const handleClickTag = (value: string) => {
     if (clickable && setActiveTag && setProducts && allProducts) {
       const v = activeTag === value ? null : value;
@@ -28,8 +28,10 @@ const ProductTags: React.FC<ProductTagsProps> = ({
         const _products: Product[] = [];
         products?.map((x) => {
           const productTags = x.productReference.split(",");
-          if (productTags.includes(v)) {
-            _products.push(x);
+          if (!isEmpty(productTags)) {
+            if (productTags.includes(v)) {
+              _products.push(x);
+            }
           }
         });
         setProducts(_products);
@@ -49,23 +51,28 @@ const ProductTags: React.FC<ProductTagsProps> = ({
     });
   });
 
-  return <div className="flex gap-2 justify-start items-center">
-    {tags.map((t, i) => {
-      return (
-        <button
-          type="button"
-          onClick={() => clickable ? handleClickTag(t) : undefined}
-          key={i}
-          className={`${t === activeTag
-            ? "bg-primary-400"
-            : "bg-primary-100 hover:bg-primary-200 text-primary-800"
-            } ${clickable ? "cursor-pointer" : "cursor-default"} px-2 py-1 text-xs font-medium rounded-full duration-200 transition-all ease-in-out`}
-        >
-          #{t}
-        </button>
-      );
-    })}
-  </div>;
+  return (
+    <div className="flex gap-2 justify-start items-center">
+      {tags.map((t, i) => {
+        return (
+          <button
+            type="button"
+            onClick={() => (clickable ? handleClickTag(t) : undefined)}
+            key={i}
+            className={`${
+              t === activeTag
+                ? "bg-primary-400"
+                : "bg-primary-100 hover:bg-primary-200 text-primary-800"
+            } ${
+              clickable ? "cursor-pointer" : "cursor-default"
+            } px-2 py-1 text-xs font-medium rounded-full duration-200 transition-all ease-in-out`}
+          >
+            #{t}
+          </button>
+        );
+      })}
+    </div>
+  );
 };
 
 ProductTags.propTypes = {

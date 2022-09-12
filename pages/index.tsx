@@ -87,12 +87,11 @@ const Home: NextPage = () => {
                     1.
                   </div>
                   <div className="text-3xl md:text-4xl font-extrabold title-gradient mb-4">
-                    Artistes vérifiés
+                    Artistes Vérifiés
                   </div>
                   <p>
-                    Technology unleashes creativity. The boundary to what’s
-                    possible is no longer physical. The measure of an artist’s
-                    craft is their ability to dream.
+                    Les Professionnels présents sur SneakArts, proposent tous
+                    des créations originales de grande qualité !
                   </p>
                 </div>
                 <div className="col-span-2 md:col-span-1 flex justify-center md:justify-start order-1 md:order-2">
@@ -114,12 +113,11 @@ const Home: NextPage = () => {
                     2.
                   </div>
                   <div className="text-3xl md:text-4xl font-extrabold title-gradient mb-4">
-                    Peinture haute qualité
+                    Peinture de Qualité
                   </div>
                   <p>
-                    Technology unleashes creativity. The boundary to what’s
-                    possible is no longer physical. The measure of an artist’s
-                    craft is their ability to dream.
+                    Tous les Artistes présents sur SneakArts utilisent des
+                    Peintures spécialement conçu pour le Cuir et Textile.
                   </p>
                 </div>
               </div>
@@ -129,12 +127,11 @@ const Home: NextPage = () => {
                     3.
                   </div>
                   <div className="text-3xl md:text-4xl font-extrabold title-gradient mb-4">
-                    Créations originales
+                    Créations Unique
                   </div>
                   <p>
-                    Technology unleashes creativity. The boundary to what’s
-                    possible is no longer physical. The measure of an artist’s
-                    craft is their ability to dream.
+                    Chaque Custom est réalisé à la demande, avec vos précisions
+                    pour un résultat unique !
                   </p>
                 </div>
                 <div className="col-span-2 md:col-span-1 flex justify-center md:justify-start order-1 md:order-2">
