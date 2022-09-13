@@ -1,5 +1,9 @@
 import * as React from "react";
 import PropTypes from "prop-types";
+import { MapMarker } from "../../types";
+import "leaflet/dist/leaflet.css";
+import "leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.css";
+import "leaflet-defaulticon-compatibility";
 import {
   MapContainer,
   TileLayer,
@@ -8,10 +12,6 @@ import {
   GeoJSON,
   FeatureGroup,
 } from "react-leaflet";
-import "leaflet/dist/leaflet.css";
-import "leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.css";
-import "leaflet-defaulticon-compatibility";
-import { MapMarker } from "../../types";
 
 type LeafletMapProps = {
   markers: MapMarker[];

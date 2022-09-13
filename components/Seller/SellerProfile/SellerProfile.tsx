@@ -1,11 +1,11 @@
 import * as React from "react";
+import dynamic from "next/dynamic";
+import ProductItem from "../../Product/ProductItem";
 import ProductTags from "../../Product/ProductTags";
 import PropTypes from "prop-types";
 import ScrollContainer from "react-indiana-drag-scroll";
-import ProductItem from "../../Product/ProductItem";
 import { GlobeAltIcon } from "@heroicons/react/outline";
 import { Product, Seller } from "../../../types";
-import dynamic from "next/dynamic";
 
 const LeafletMap = dynamic(() => import("../../LeafletMap"), { ssr: false });
 
@@ -42,17 +42,21 @@ const SellerProfile: React.FC<SellerProfileProps> = ({
               <div className="font-bold text-3xl">{seller?.sellerUserName}</div>
               <div className="flex gap-2">
                 <span>
-                  {seller?.sellerCountry}, {seller?.sellerCity} |{" "}
+                  {seller?.sellerCountry}, {seller?.sellerCity}
                 </span>
                 {seller?.sellerSocial && (
-                  <a
-                    href={seller?.sellerSocial}
-                    target={"_blank"}
-                    rel="noreferrer nooperer"
-                    className="items-center justify-center hover:text-primary-500 duration-200 transition-all ease-in-out"
-                  >
-                    <GlobeAltIcon className="w-6 h-6" />
-                  </a>
+                  <>
+                    {" "}
+                    |{" "}
+                    <a
+                      href={seller?.sellerSocial}
+                      target={"_blank"}
+                      rel="noreferrer nooperer"
+                      className="items-center justify-center hover:text-primary-500 duration-200 transition-all ease-in-out"
+                    >
+                      <GlobeAltIcon className="w-6 h-6" />
+                    </a>
+                  </>
                 )}
               </div>
             </div>

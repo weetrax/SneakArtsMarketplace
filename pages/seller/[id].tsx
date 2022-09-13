@@ -1,14 +1,13 @@
-import React, { useState } from "react";
+import Container from "../../components/_Layout/Container";
 import Head from "next/head";
 import Link from "next/link";
-import Container from "../../components/_Layout/Container";
+import React, { useState } from "react";
 import SellerProfile from "../../components/Seller/SellerProfile";
-import type { GetStaticPaths, GetStaticProps, NextPage } from "next";
-import { IParams, Product, Seller } from "../../types";
-import { _sellers } from "../../data/sellers";
 import { BackspaceIcon } from "@heroicons/react/outline";
-import { routes } from "../../routes";
 import { getSellers } from "../../services/sneakartsApi";
+import { IParams, Product, Seller } from "../../types";
+import { routes } from "../../routes";
+import type { GetStaticPaths, GetStaticProps, NextPage } from "next";
 
 const Home: NextPage<{ seller: Seller }> = ({ seller }) => {
   const [products, setProducts] = useState<Product[]>(
@@ -52,7 +51,6 @@ const Home: NextPage<{ seller: Seller }> = ({ seller }) => {
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const arr: string[] = _sellers.map((x) => x.sellerId);
   const { data } = await getSellers();
   const paths = (data as Seller[]).map((seller: Seller) => {
     return {

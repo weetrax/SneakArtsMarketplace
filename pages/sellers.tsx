@@ -7,24 +7,26 @@ import { Seller } from "../types";
 import Container from "../components/_Layout/Container";
 import CarouselCoverflow from "../components/_Layout/CarouselCoverflow";
 import SellerItem from "../components/Seller/SellerItem";
-import { _sellers } from "../data/sellers";
+import sellersJson from "../data/sellers.json";
 import { getSellers } from "../services/sneakartsApi";
 import { AxiosResponse } from "axios";
 import FullscreenLoader from "../components/_Layout/Loaders/FullscreenLoader";
 
 const Home: NextPage = () => {
   const [seller, setSeller] = useState<Seller[]>([]);
-  const [copyArtist, setCopyArtist] = useState<Seller[]>([]);
+  const [filteredSeller, setFilteredSeller] = useState<Seller[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
 
   useEffect(() => {
     getSellers()
       .then((response: AxiosResponse) => {
         setSeller(response.data);
-        setCopyArtist(response.data);
+        setFilteredSeller(response.data);
       })
       .catch((err) => {
         //console.log(err);
+        setSeller(sellersJson as any);
+        setFilteredSeller(sellersJson as any);
       })
       .finally(() => {
         setLoading(false);
@@ -37,7 +39,7 @@ const Home: NextPage = () => {
         .toLocaleLowerCase()
         .includes(e.target.value.toLocaleLowerCase())
     );
-    setCopyArtist(filteredSellers);
+    setFilteredSeller(filteredSellers);
   };
 
   return (
@@ -89,9 +91,9 @@ const Home: NextPage = () => {
                 </div>
               </div>
             </div>
-            {copyArtist.length > 0 ? (
+            {filteredSeller.length > 0 ? (
               <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 py-4">
-                {copyArtist.map((s, i) => {
+                {filteredSeller.map((s, i) => {
                   return (
                     <SellerItem key={`seller_${i}`} seller={s}></SellerItem>
                   );

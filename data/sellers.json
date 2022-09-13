@@ -1,0 +1,146 @@
+[
+    {
+        "sellerId": "2",
+        "sellerLogo": "https://sneakarts.com/modules/apmarketplace/views/img/vendor/591330889_1213627047.jpeg",
+        "sellerUserName": "Black Dessinator",
+        "sellerFirstLastName": "Berim",
+        "sellerBio": "Artiste de Custom Sneakers",
+        "sellerEmail": "contact@sneakarts.com",
+        "sellerAddress": "Saint-Leu la For\u00eat",
+        "sellerCity": "Paris",
+        "sellerCountry": "France",
+        "sellerLat": "",
+        "sellerLong": "",
+        "sellerProducts": [
+            {
+                "productID": 431,
+                "productName": "Full Custom Veste",
+                "productCategory": "Custom",
+                "productUrl": "https://sneakarts.com/fr/custom/full-custom-veste.html",
+                "productImage": "https://sneakarts.com/1204-large_default/full-custom-veste.jpg",
+                "productQty": 100,
+                "productPrice": "250,00\u00a0\u20ac",
+                "productReference": "custom,manga,veste,jean",
+                "productSummary": "",
+                "productDescription": ""
+            },
+            {
+                "productID": 432,
+                "productName": "Full Custom Shoes",
+                "productCategory": "Custom",
+                "productUrl": "https://sneakarts.com/fr/custom/full-custom-shoes.html",
+                "productImage": "https://sneakarts.com/1205-large_default/full-custom-shoes.jpg",
+                "productQty": 98,
+                "productPrice": "500,00\u00a0\u20ac",
+                "productReference": "custom,shoes,sneakers,manga",
+                "productSummary": "",
+                "productDescription": ""
+            }
+        ]
+    },
+    {
+        "sellerId": "3",
+        "sellerLogo": "https://sneakarts.com/modules/apmarketplace/views/img/vendor/439557151_1252596339.jpg",
+        "sellerUserName": "Atelier_Custom_Shoes",
+        "sellerFirstLastName": "M\u00e9lanie",
+        "sellerBio": "Artiste de Custom R\u00e9aliste",
+        "sellerEmail": "artiste@sneakarts.com",
+        "sellerAddress": "Nevers",
+        "sellerCity": "Nevers",
+        "sellerCountry": "France",
+        "sellerLat": "",
+        "sellerLong": "",
+        "sellerProducts": [
+            {
+                "productID": 434,
+                "productName": "Full Custom",
+                "productCategory": "Custom",
+                "productUrl": "https://sneakarts.com/fr/custom/full-custom.html",
+                "productImage": "https://sneakarts.com/1209-large_default/full-custom.jpg",
+                "productQty": 100,
+                "productPrice": "500,00\u00a0\u20ac",
+                "productReference": "custom,lego,star,wars,dessin",
+                "productSummary": "",
+                "productDescription": ""
+            },
+            {
+                "productID": 435,
+                "productName": "Custom Boot Dr. Mertens",
+                "productCategory": "Custom",
+                "productUrl": "https://sneakarts.com/fr/custom/custom-boot-dr-mertens.html",
+                "productImage": "https://sneakarts.com/1210-large_default/custom-boot-dr-mertens.jpg",
+                "productQty": 100,
+                "productPrice": "300,00\u00a0\u20ac",
+                "productReference": "custom,boots,dr,mertens,realiste",
+                "productSummary": "",
+                "productDescription": ""
+            }
+        ]
+    },
+    {
+        "sellerId": "4",
+        "sellerLogo": "https://sneakarts.com/modules/apmarketplace/views/img/vendor/476442823_1061204652.png",
+        "sellerUserName": "Custom_My_Shoes",
+        "sellerFirstLastName": "Mika",
+        "sellerBio": "Artiste de Custom Sneakers bas\u00e9 sur Monaco",
+        "sellerEmail": "artiste@sneakarts.com",
+        "sellerAddress": "Monaco",
+        "sellerCity": "Monaco",
+        "sellerCountry": "France",
+        "sellerLat": "",
+        "sellerLong": "",
+        "sellerProducts": [
+            {
+                "productID": 436,
+                "productName": "Full Custom",
+                "productCategory": "Custom",
+                "productUrl": "https://sneakarts.com/fr/custom/full-custom.html",
+                "productImage": "https://sneakarts.com/1211-large_default/full-custom.jpg",
+                "productQty": 100,
+                "productPrice": "500,00\u00a0\u20ac",
+                "productReference": "custom,shoes,sneakers,music,fullcustom",
+                "productSummary": "",
+                "productDescription": ""
+            },
+            {
+                "productID": 437,
+                "productName": "Custom Pastel",
+                "productCategory": "Custom",
+                "productUrl": "https://sneakarts.com/fr/custom/custom-pastel.html",
+                "productImage": "https://sneakarts.com/1212-large_default/custom-pastel.jpg",
+                "productQty": 100,
+                "productPrice": "150,00\u00a0\u20ac",
+                "productReference": "custom,shoes,pastel",
+                "productSummary": "",
+                "productDescription": ""
+            }
+        ]
+    },
+    {
+        "sellerId": "5",
+        "sellerLogo": "https://sneakarts.com/modules/apmarketplace/views/img/vendor/387715223_1129463182.jpeg",
+        "sellerUserName": "SophieCustom",
+        "sellerFirstLastName": "Sophie",
+        "sellerBio": "B\ufeffonjour, \ufeffJe m\\'appelle Sophie et je fais du Custom shoes, textiles, sacs... \ufeffJe personnalise selon go\u00fbts et d\u00e9sirs pour que vous ayez un article unique \u2764\ufe0f \ufeffTous les dessins sont fait \u00e0 la main et je ne reproduis pas \u00e0 l\\'identique sauf quelques vestes !",
+        "sellerEmail": "artiste@sneakarts.com",
+        "sellerAddress": "Adresse",
+        "sellerCity": "France",
+        "sellerCountry": "France",
+        "sellerLat": "",
+        "sellerLong": "",
+        "sellerProducts": [
+            {
+                "productID": 438,
+                "productName": "Custom Disney Veste en Jean",
+                "productCategory": "Custom",
+                "productUrl": "https://sneakarts.com/fr/custom/custom-disney-veste-en-jean.html",
+                "productImage": "https://sneakarts.com/1213-large_default/custom-disney-veste-en-jean.jpg",
+                "productQty": 100,
+                "productPrice": "250,00\u00a0\u20ac",
+                "productReference": "custom,veste,jacket,jean",
+                "productSummary": "",
+                "productDescription": ""
+            }
+        ]
+    }
+]

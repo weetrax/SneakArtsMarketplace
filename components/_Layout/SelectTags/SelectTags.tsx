@@ -1,6 +1,6 @@
+import PropTypes from "prop-types";
 import React, { useEffect, useState } from "react";
 import Select, { GroupBase, StylesConfig } from "react-select";
-import PropTypes from "prop-types";
 import { StateManagerProps } from "react-select/dist/declarations/src/useStateManager";
 
 interface SelectTagsProps extends StateManagerProps {

@@ -1,9 +1,9 @@
-import type { NextPage } from "next";
+import Container from "../components/_Layout/Container";
 import Head from "next/head";
 import Link from "next/link";
-import { useEffect } from "react";
-import Container from "../components/_Layout/Container";
 import { routes } from "../routes";
+import { useEffect } from "react";
+import type { NextPage } from "next";
 
 const Home: NextPage = () => {
   useEffect(() => {
@@ -27,7 +27,8 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div>
-        <section className="min-h-screen-nav flex items-center justify-center overflow-hidden">
+        <section className="min-h-screen-nav flex relative items-center justify-center overflow-hidden">
+          <div className="h-full w-full absolute z-10 md:z-0"></div>
           <Container>
             <div className="movable blur-[1px] opacity-40" id="globe">
               <canvas
@@ -141,6 +142,21 @@ const Home: NextPage = () => {
                   ></img>
                 </div>
               </div>
+            </div>
+            <div className="flex justify-center items-center gap-4 my-12">
+              <Link href={routes.sellers}>
+                <a className="rounded-full px-8 py-3 text-white border border-primary-500 bg-primary-500 hover:bg-primary-400 duration-200 transition-all ease-in-out">
+                  Trouver un artiste
+                </a>
+              </Link>
+              <a
+                href="https://sneakarts.com/fr/"
+                target={"_blank"}
+                rel="noreferrer nooperer"
+                className="rounded-full px-8 py-3 text-primary-500 hover:text-white border border-primary-500 hover:bg-primary-400 duration-200 transition-all ease-in-out"
+              >
+                Acheter un kit
+              </a>
             </div>
           </Container>
         </section>

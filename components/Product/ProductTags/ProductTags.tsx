@@ -1,7 +1,7 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { Product } from "../../../types";
 import isEmpty from "is-empty";
+import PropTypes from "prop-types";
+import React from "react";
+import { Product } from "../../../types";
 
 type ProductTagsProps = {
   products: Product[];

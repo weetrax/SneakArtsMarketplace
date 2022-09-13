@@ -6,3 +6,7 @@ const ALL_SELLERS_ENDPOINT = `https://sneakarts.com/fr/marketplace/api?secret_ke
 export const getSellers = () => {
   return axios.get(ALL_SELLERS_ENDPOINT);
 };
+
+export const getSellerUrl = (id: string, name: string) => {
+  return `https://sneakarts.com/fr/store/${name.replace(" ", "_")}-${id}.html`;
+};

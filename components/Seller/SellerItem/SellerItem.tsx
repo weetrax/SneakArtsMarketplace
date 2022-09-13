@@ -3,6 +3,7 @@ import Link from "next/link";
 import ProductTags from "../../Product/ProductTags";
 import PropTypes from "prop-types";
 import ScrollContainer from "react-indiana-drag-scroll";
+import { getSellerUrl } from "../../../services/sneakartsApi";
 import { LightningBoltIcon, ShoppingBagIcon } from "@heroicons/react/outline";
 import { Seller } from "../../../types";
 
@@ -51,7 +52,7 @@ const SellerItem: React.FC<sellerItemProps> = ({ seller }) => {
           </div>
           <div className="-ml-px w-0 flex-1 flex">
             <a
-              href={`https://sneakarts.com/fr/seller/${seller.sellerId}`}
+              href={getSellerUrl(seller.sellerId, seller.sellerUserName)}
               target={"_blank"}
               rel="noreferrer nooperer"
               className="relative w-0 flex-1 inline-flex items-center justify-center py-4 text-sm font-medium rounded-br-lg hover:text-primary-500 duration-200 transition-all ease-in-out"
