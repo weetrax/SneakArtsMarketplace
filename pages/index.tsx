@@ -24,7 +24,7 @@ const Home: NextPage = () => {
           name="description"
           content="SneakArts - Marketplace for creators"
         />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/assets/img/favicon.ico" />
       </Head>
       <div>
         <section className="min-h-screen-nav flex relative items-center justify-center overflow-hidden">

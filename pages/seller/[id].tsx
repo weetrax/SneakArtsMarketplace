@@ -21,12 +21,12 @@ const Home: NextPage<{ seller: Seller }> = ({ seller }) => {
   return (
     <div>
       <Head>
-        <title>SneakArts - Nos artistes</title>
+        <title>SneakArts - {seller.sellerUserName}</title>
         <meta
           name="description"
           content="SneakArts - Marketplace for creators"
         />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/assets/img/favicon.ico" />
       </Head>
       <Container>
         <div className="my-8">
