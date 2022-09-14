@@ -2,7 +2,7 @@ import React from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 // import required modules
-import { EffectCoverflow, Pagination } from "swiper";
+import { EffectCoverflow, Pagination, Autoplay } from "swiper";
 
 type CarouselCoverflowProps = {
   items?: React.ReactNode[];
@@ -11,6 +11,9 @@ type CarouselCoverflowProps = {
 const CarouselCoverflow: React.FC<CarouselCoverflowProps> = ({ items }) => {
   return (
     <Swiper
+      loop={true}
+      speed={1000}
+      autoplay={{ delay: 5000, disableOnInteraction: false }}
       effect={"coverflow"}
       grabCursor={true}
       centeredSlides={true}
@@ -40,8 +43,7 @@ const CarouselCoverflow: React.FC<CarouselCoverflowProps> = ({ items }) => {
         clickable: true,
       }}
       slideToClickedSlide
-      modules={[EffectCoverflow, Pagination]}
-      loop={true}
+      modules={[EffectCoverflow, Pagination, Autoplay]}
     >
       {items?.map((x, i) => {
         return <SwiperSlide key={`s${i}`}>{x}</SwiperSlide>;

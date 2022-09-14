@@ -28,7 +28,7 @@ const SellerProfile: React.FC<SellerProfileProps> = ({
 }) => {
   return (
     <div className="grid grid-cols-12 items-start justify-center gap-8">
-      <div className="col-span-12 md:col-span-8 lg:col-span-9">
+      <div className="col-span-12">
         <div className="text-center md:text-left text-3xl md:text-4xl font-extrabold title-gradient mb-8">
           Créateur
         </div>
@@ -86,7 +86,7 @@ const SellerProfile: React.FC<SellerProfileProps> = ({
           </div>
         </div>
       </div>
-      <div className="col-span-12 md:col-span-4 lg:col-span-3 hidden">
+      <div className="col-span-12 hidden">
         <div className="text-center md:text-left text-3xl md:text-4xl font-extrabold title-gradient mb-8">
           Localisation
         </div>
