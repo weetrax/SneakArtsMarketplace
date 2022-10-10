@@ -15,6 +15,7 @@ type NavbarProps = {
 
 const navigation = [
   { name: "Home", href: routes.home },
+  { name: "Services", href: routes.services },
   { name: "Artistes", href: routes.sellers },
 ];
 
@@ -45,28 +46,28 @@ const Navbar: React.FC<NavbarProps> = () => {
               <div className="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
                 <div className="flex-shrink-0 flex items-center">
                   <img
-                    className="block dark:hidden lg:hidden h-8 w-auto"
-                    src="http://sneakarts.com/img/logo.png"
+                    className="block dark:hidden lg:hidden h-12 w-auto"
+                    src="https://sneakarts.com/img/logo.png"
                     alt="Workflow"
                   />
                   <img
-                    className="hidden dark:hidden lg:block h-8 w-auto"
-                    src="http://sneakarts.com/img/logo.png"
+                    className="hidden dark:hidden lg:block h-12 w-auto"
+                    src="https://sneakarts.com/img/logo.png"
                     alt="Workflow"
                   />
                   <img
-                    className="hidden dark:block dark:lg:hidden h-8 w-auto"
-                    src="http://sneakarts.com/img/logoBlanc.png"
+                    className="hidden dark:block dark:lg:hidden h-12 w-auto"
+                    src="https://sneakarts.com/img/logoBlanc.png"
                     alt="Workflow"
                   />
                   <img
-                    className="hidden dark:hidden dark:lg:block h-8 w-auto"
-                    src="http://sneakarts.com/img/logoBlanc.png"
+                    className="hidden dark:hidden dark:lg:block h-12 w-auto"
+                    src="https://sneakarts.com/img/logoBlanc.png"
                     alt="Workflow"
                   />
                 </div>
-                <div className="hidden sm:block sm:ml-6">
-                  <div className="flex space-x-4">
+                <div className="items-center hidden sm:flex sm:ml-6">
+                  <div className="flex h-full p-4 space-x-4">
                     {navigation.map((item) => (
                       <Link href={item.href} key={item.name}>
                         <a

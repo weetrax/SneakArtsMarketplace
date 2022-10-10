@@ -57,7 +57,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
       params: { id: seller.sellerId },
     };
   });
-  return { paths, fallback: false };
+  return { paths, fallback: "blocking" };
 };
 
 export const getStaticProps: GetStaticProps = async (context) => {

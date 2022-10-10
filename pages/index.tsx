@@ -1,11 +1,38 @@
 import Container from "../components/_Layout/Container";
 import Head from "next/head";
 import Link from "next/link";
+import ProductSearch from "../components/Product/ProductSearch";
+import sellersJson from "../data/sellers.json";
+import { AxiosResponse } from "axios";
+import { getSellers } from "../services/sneakartsApi";
 import { routes } from "../routes";
-import { useEffect } from "react";
+import { Product, Seller } from "../types";
+import { useEffect, useState } from "react";
 import type { NextPage } from "next";
 
 const Home: NextPage = () => {
+  const [seller, setSeller] = useState<Seller[]>([]);
+
+  useEffect(() => {
+    getSellers()
+      .then((response: AxiosResponse) => {
+        setSeller(response.data);
+      })
+      .catch((err) => {
+        //console.log(err);
+        setSeller(sellersJson as any);
+      });
+  }, []);
+
+  const getAllProducts = () => {
+    let products: Product[] = [];
+    [...seller].forEach((seller) => {
+      products = [...products, ...seller.sellerProducts];
+    });
+
+    return products;
+  };
+
   useEffect(() => {
     const script = document.createElement("script");
     script.src = "/assets/js/main-globe.js";
@@ -50,6 +77,32 @@ const Home: NextPage = () => {
             </div>
           </Container>
         </section>
+        <svg
+          width="16"
+          height="49"
+          viewBox="0 0 16 49"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          className="mt-12 mx-auto featured-page-header-arrow relative"
+        >
+          <path
+            opacity="0.5"
+            d="M7.2929 48.7071C7.68342 49.0976 8.31658 49.0976 8.70711 48.7071L15.0711 42.3431C15.4616 41.9526 15.4616 41.3195 15.0711 40.9289C14.6805 40.5384 14.0474 40.5384 13.6569 40.9289L8 46.5858L2.34315 40.9289C1.95262 40.5384 1.31946 40.5384 0.928934 40.9289C0.53841 41.3195 0.53841 41.9526 0.928934 42.3431L7.2929 48.7071ZM7 4.37114e-08L7 48L9 48L9 -4.37114e-08L7 4.37114e-08Z"
+            fill="#596380"
+          ></path>
+        </svg>
+        <section>
+          <Container>
+            <div className="mt-12">
+              <h2 className="text-center text-3xl md:text-4xl font-extrabold title-gradient mb-8">
+                Les services de nos artistes
+              </h2>
+              <div className="flex items-center justify-center">
+                <ProductSearch products={getAllProducts()} />
+              </div>
+            </div>
+          </Container>
+        </section>
         <div className="flex justify-center items-center gap-4 my-12 relative z-20">
           <Link href={routes.sellers}>
             <a className="rounded-full px-8 py-3 text-white border border-primary-500 bg-primary-500 hover:bg-primary-400 duration-200 transition-all ease-in-out">
@@ -60,7 +113,7 @@ const Home: NextPage = () => {
             href="https://sneakarts.com/fr/"
             target={"_blank"}
             rel="noreferrer nooperer"
-            className="rounded-full px-8 py-3 text-primary-500 hover:text-white border border-primary-500 hover:bg-primary-400 duration-200 transition-all ease-in-out"
+            className="rounded-full px-8 py-3 text-primary-500 hover:text-white border border-primary-500 hover:bg-primary-500 duration-200 transition-all ease-in-out"
           >
             Acheter un kit
           </a>
@@ -153,7 +206,7 @@ const Home: NextPage = () => {
                 href="https://sneakarts.com/fr/"
                 target={"_blank"}
                 rel="noreferrer nooperer"
-                className="rounded-full px-8 py-3 text-primary-500 hover:text-white border border-primary-500 hover:bg-primary-400 duration-200 transition-all ease-in-out"
+                className="rounded-full px-8 py-3 text-primary-500 hover:text-white border border-primary-500 hover:bg-primary-500 duration-200 transition-all ease-in-out"
               >
                 Acheter un kit
               </a>

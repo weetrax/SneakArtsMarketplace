@@ -43,15 +43,6 @@ const Home: NextPage = () => {
     setFilteredSeller(filteredSellers);
   };
 
-  const getAllProducts = () => {
-    let products: Product[] = [];
-    [...seller].forEach((seller) => {
-      products = [...products, ...seller.sellerProducts];
-    });
-
-    return products;
-  };
-
   return (
     <div>
       <Head>
@@ -67,14 +58,6 @@ const Home: NextPage = () => {
       ) : (
         <Container>
           <div className="my-8">
-            <div className="mb-16">
-              <h2 className="text-center md:text-left text-3xl md:text-4xl font-extrabold title-gradient mb-8">
-                Nos Produits
-              </h2>
-              <div className="flex items-center justify-center">
-                <ProductSearch products={getAllProducts()} />
-              </div>
-            </div>
             <div className="mb-16">
               <h2 className="text-center md:text-left text-3xl md:text-4xl font-extrabold title-gradient mb-8">
                 Nos Artistes Partenaires

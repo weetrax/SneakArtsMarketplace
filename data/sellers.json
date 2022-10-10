@@ -5,7 +5,7 @@
         "sellerUserName": "Black Dessinator",
         "sellerFirstLastName": "Berim",
         "sellerBio": "Artiste de Custom Sneakers",
-        "sellerEmail": "contact@sneakarts.com",
+        "sellerEmail": "andrea06590@hotmail.fr",
         "sellerAddress": "Saint-Leu la For\u00eat",
         "sellerCity": "Paris",
         "sellerCountry": "France",
@@ -138,6 +138,45 @@
                 "productQty": 100,
                 "productPrice": "250,00\u00a0\u20ac",
                 "productReference": "custom,veste,jacket,jean",
+                "productSummary": "",
+                "productDescription": ""
+            }
+        ]
+    },
+    {
+        "sellerId": "6",
+        "sellerLogo": "https://sneakarts.com/modules/apmarketplace/views/img/vendor/434251242_1349710702.jpg",
+        "sellerUserName": "MikeCustomShoes",
+        "sellerFirstLastName": "Manon ",
+        "sellerBio": "Artiste de Custom Sneakers pour Enfant et Adultes. Cr\u00e9ez votre paire avec les centaines de couleur possibles !",
+        "sellerEmail": "artiste@sneakarts.com",
+        "sellerAddress": "Nice",
+        "sellerCity": "Nice",
+        "sellerCountry": "France",
+        "sellerLat": "",
+        "sellerLong": "",
+        "sellerProducts": [
+            {
+                "productID": 439,
+                "productName": "Custom Ricard",
+                "productCategory": "Custom",
+                "productUrl": "https://sneakarts.com/fr/custom/custom-ricard.html",
+                "productImage": "https://sneakarts.com/1214-large_default/custom-ricard.jpg",
+                "productQty": 100,
+                "productPrice": "100,00\u00a0\u20ac",
+                "productReference": "custom,ricard,alcool",
+                "productSummary": "",
+                "productDescription": ""
+            },
+            {
+                "productID": 440,
+                "productName": "Custom Drip",
+                "productCategory": "Custom",
+                "productUrl": "https://sneakarts.com/fr/custom/custom-drip.html",
+                "productImage": "https://sneakarts.com/1215-large_default/custom-drip.jpg",
+                "productQty": 100,
+                "productPrice": "200,00\u00a0\u20ac",
+                "productReference": "custom,drip,red,dunk,high,jordan",
                 "productSummary": "",
                 "productDescription": ""
             }

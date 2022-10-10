@@ -42,14 +42,6 @@ const SellerItem: React.FC<sellerItemProps> = ({ seller }) => {
       </div>
       <div>
         <div className="-mt-px flex divide-x group-hover:divide-primary-500 divide-gray-200 dark:divide-dark-400">
-          <div className="w-0 flex-1 flex">
-            <Link href={`/seller/${seller.sellerId}`}>
-              <a className="relative -mr-px w-0 flex-1 inline-flex items-center justify-center py-4 text-sm font-medium rounded-bl-lg hover:text-primary-500 duration-200 transition-all ease-in-out">
-                <LightningBoltIcon className="w-5 h-5" aria-hidden="true" />
-                <span className="ml-3">Créations</span>
-              </a>
-            </Link>
-          </div>
           <div className="-ml-px w-0 flex-1 flex">
             <a
               href={getSellerUrl(seller.sellerId, seller.sellerUserName)}
@@ -58,7 +50,7 @@ const SellerItem: React.FC<sellerItemProps> = ({ seller }) => {
               className="relative w-0 flex-1 inline-flex items-center justify-center py-4 text-sm font-medium rounded-br-lg hover:text-primary-500 duration-200 transition-all ease-in-out"
             >
               <ShoppingBagIcon className="w-5 h-5" aria-hidden="true" />
-              <span className="ml-3">Commander</span>
+              <span className="ml-3">Visiter le Shop</span>
             </a>
           </div>
         </div>

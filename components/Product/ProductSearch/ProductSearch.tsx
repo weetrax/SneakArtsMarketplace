@@ -10,7 +10,7 @@ type ProductSearchProps = {
 
 const ProductSearch: React.FC<ProductSearchProps> = ({ products }) => {
   const [tags, setTags] = React.useState<string[]>([]);
-  const [selectedTags, setSelectedTags] = useState<string[]>([]);
+  const [selectedTags, setSelectedTags] = useState<string[]>(["custom"]);
 
   const [filteredProducts, setFilteredProducts] = useState<Product[]>([]);
 
@@ -31,27 +31,29 @@ const ProductSearch: React.FC<ProductSearchProps> = ({ products }) => {
 
   useEffect(() => {
     handleFilterProductsByTags(selectedTags);
-  }, [selectedTags]);
+  }, [products, selectedTags]);
 
   const handleFilterProductsByTags = (tags: string[]) => {
-    console.log(tags);
     const _products = [...products];
     const _filteredProducts: Product[] = [];
-    _products.forEach((p) => {
-      if (!_filteredProducts.find((f) => f.productUrl === p.productUrl)) {
-        const _productTags: string[] = [];
-        p.productReference.split(",").forEach((z) => {
-          if (!_productTags.includes(z)) {
-            _productTags.push(z);
-          }
-        });
 
-        _productTags.forEach((t) => {
-          if (tags.includes(t)) {
-            _filteredProducts.push(p);
-          }
-        });
-      }
+    tags.forEach((tag) => {
+      _products.forEach((p) => {
+        if (!_filteredProducts.find((f) => f.productUrl === p.productUrl)) {
+          const _productTags: string[] = [];
+          p.productReference.split(",").forEach((z) => {
+            if (!_productTags.includes(z)) {
+              _productTags.push(z);
+            }
+          });
+
+          _productTags.forEach((t) => {
+            if (tag === t) {
+              _filteredProducts.push(p);
+            }
+          });
+        }
+      });
     });
 
     setFilteredProducts(_filteredProducts);
@@ -65,9 +67,9 @@ const ProductSearch: React.FC<ProductSearchProps> = ({ products }) => {
         setSelectedTags={setSelectedTags}
       />
       <div className="py-16">
-        <div className="grid grid-cols-12">
-          {filteredProducts.map((p) => {
-            return <ProductItem product={p} />;
+        <div className="grid grid-cols-12 gap-6">
+          {filteredProducts.map((p, i) => {
+            return <ProductItem key={`fp_${p.productID}_${i}`} product={p} />;
           })}
         </div>
       </div>
