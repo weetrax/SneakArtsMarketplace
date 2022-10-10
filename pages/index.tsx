@@ -50,7 +50,7 @@ const Home: NextPage = () => {
             </div>
           </Container>
         </section>
-        <div className="flex justify-center items-center gap-4 my-12">
+        <div className="flex justify-center items-center gap-4 my-12 relative z-20">
           <Link href={routes.sellers}>
             <a className="rounded-full px-8 py-3 text-white border border-primary-500 bg-primary-500 hover:bg-primary-400 duration-200 transition-all ease-in-out">
               Trouver un artiste

@@ -1,16 +1,17 @@
-import React, { useEffect, useState } from "react";
-import Head from "next/head";
-import type { NextPage } from "next";
-import { SearchIcon } from "@heroicons/react/outline";
-import { ChangeEvent } from "react";
-import { Seller } from "../types";
-import Container from "../components/_Layout/Container";
 import CarouselCoverflow from "../components/_Layout/CarouselCoverflow";
+import Container from "../components/_Layout/Container";
+import FullscreenLoader from "../components/_Layout/Loaders/FullscreenLoader";
+import Head from "next/head";
+import ProductSearch from "../components/Product/ProductSearch";
+import React, { useEffect, useState } from "react";
 import SellerItem from "../components/Seller/SellerItem";
 import sellersJson from "../data/sellers.json";
-import { getSellers } from "../services/sneakartsApi";
 import { AxiosResponse } from "axios";
-import FullscreenLoader from "../components/_Layout/Loaders/FullscreenLoader";
+import { ChangeEvent } from "react";
+import { getSellers } from "../services/sneakartsApi";
+import { Product, Seller } from "../types";
+import { SearchIcon } from "@heroicons/react/outline";
+import type { NextPage } from "next";
 
 const Home: NextPage = () => {
   const [seller, setSeller] = useState<Seller[]>([]);
@@ -42,6 +43,15 @@ const Home: NextPage = () => {
     setFilteredSeller(filteredSellers);
   };
 
+  const getAllProducts = () => {
+    let products: Product[] = [];
+    [...seller].forEach((seller) => {
+      products = [...products, ...seller.sellerProducts];
+    });
+
+    return products;
+  };
+
   return (
     <div>
       <Head>
@@ -57,6 +67,14 @@ const Home: NextPage = () => {
       ) : (
         <Container>
           <div className="my-8">
+            <div className="mb-16">
+              <h2 className="text-center md:text-left text-3xl md:text-4xl font-extrabold title-gradient mb-8">
+                Nos Produits
+              </h2>
+              <div className="flex items-center justify-center">
+                <ProductSearch products={getAllProducts()} />
+              </div>
+            </div>
             <div className="mb-16">
               <h2 className="text-center md:text-left text-3xl md:text-4xl font-extrabold title-gradient mb-8">
                 Nos Artistes Partenaires
