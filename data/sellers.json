@@ -52,28 +52,40 @@
         "sellerLong": "",
         "sellerProducts": [
             {
-                "productID": 434,
-                "productName": "Full Custom",
+                "productID": 435,
+                "productName": "Custom R\u00e9aliste 2 Personnages",
                 "productCategory": "Custom",
-                "productUrl": "https://sneakarts.com/fr/custom/full-custom.html",
-                "productImage": "https://sneakarts.com/1209-large_default/full-custom.jpg",
+                "productUrl": "https://sneakarts.com/fr/custom/custom-realiste-2-personnages.html",
+                "productImage": "https://sneakarts.com/1234-large_default/custom-realiste-2-personnages.jpg",
                 "productQty": 100,
-                "productPrice": "500,00\u00a0\u20ac",
-                "productReference": "custom,lego,star,wars,dessin",
-                "productSummary": "",
-                "productDescription": ""
+                "productPrice": "350,00\u00a0\u20ac",
+                "productReference": "custom,boots,drmertens,realiste",
+                "productSummary": "<p>Cr\u00e9ation d'une Custom r\u00e9aliste sur les deux faces ext\u00e9rieures de vos baskets, bottes ou chaussures.</p>",
+                "productDescription": "<p>Cr\u00e9ation d'une Custom r\u00e9aliste sur les deux faces ext\u00e9rieures de vos baskets, bottes ou chaussures.</p>"
             },
             {
-                "productID": 435,
-                "productName": "Custom Boot Dr. Mertens",
+                "productID": 444,
+                "productName": "Full Custom By Atelier Custom Shoes",
                 "productCategory": "Custom",
-                "productUrl": "https://sneakarts.com/fr/custom/custom-boot-dr-mertens.html",
-                "productImage": "https://sneakarts.com/1210-large_default/custom-boot-dr-mertens.jpg",
+                "productUrl": "https://sneakarts.com/fr/custom/full-custom-by-atelier-custom-shoes.html",
+                "productImage": "https://sneakarts.com/1237-large_default/full-custom-by-atelier-custom-shoes.jpg",
                 "productQty": 100,
-                "productPrice": "300,00\u00a0\u20ac",
-                "productReference": "custom,boots,dr,mertens,realiste",
-                "productSummary": "",
-                "productDescription": ""
+                "productPrice": "1\u00a0000,00\u00a0\u20ac",
+                "productReference": "custom,reel,fullcustom,art",
+                "productSummary": "<p>Cr\u00e9ation d'un Full Custom sur 100% de vos chaussures avec les personnages, dessins et tout ce que vous aimez !\u00a0</p>\n<p>Les faces int\u00e9rieures et ext\u00e9rieures sont\u00a0enti\u00e8rement personnalisables et l'Artiste vous propose une oeuvre d'art unique.</p>\n<p><strong>Le prix d'un Full Custom inclut les frais de livraison et la paire (AF1, Jordan...) !</strong></p>",
+                "productDescription": "<p>Cr\u00e9ation d'un Full Custom sur 100% de vos chaussures avec les personnages, dessins et tout ce que vous aimez !\u00a0</p>\n<p>Les faces int\u00e9rieures et ext\u00e9rieures sont\u00a0enti\u00e8rement personnalisables et l'Artiste vous propose une oeuvre d'art unique.</p>\n<p><strong>Le prix d'un Full Custom inclut les frais de livraison et la paire (AF1, Jordan...) !</strong></p>"
+            },
+            {
+                "productID": 445,
+                "productName": "Custom Premium",
+                "productCategory": "Custom",
+                "productUrl": "https://sneakarts.com/fr/custom/custom-premium.html",
+                "productImage": "https://sneakarts.com/1238-large_default/custom-premium.jpg",
+                "productQty": 100,
+                "productPrice": "700,00\u00a0\u20ac",
+                "productReference": "custom,visage",
+                "productSummary": "<p>Cr\u00e9ation sur-mesure\u00a0sur toute votre basket, avec la\u00a0r\u00e9alisation de dessins\u00a0uniquement sur les parties ext\u00e9rieures (~4 personnages r\u00e9alistes).</p>\n<p>Si vous souhaitez avoir\u00a0plus de\u00a0Personnages l'option Full Custom est l\u00e0 pour vous :)</p>",
+                "productDescription": "<p>Cr\u00e9ation sur-mesure\u00a0sur toute votre basket, avec la\u00a0r\u00e9alisation de dessins\u00a0uniquement sur les parties ext\u00e9rieures (~4 personnages r\u00e9alistes).</p>\n<p>Si vous souhaitez avoir\u00a0plus de\u00a0Personnages l'option Full Custom est l\u00e0 pour vous :)</p>"
             }
         ]
     },

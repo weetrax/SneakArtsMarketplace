@@ -17,6 +17,7 @@ const navigation = [
   { name: "Home", href: routes.home },
   { name: "Services", href: routes.services },
   { name: "Artistes", href: routes.sellers },
+  { name: "Join us", href: routes.joinus },
 ];
 
 const Navbar: React.FC<NavbarProps> = () => {

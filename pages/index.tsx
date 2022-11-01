@@ -29,7 +29,6 @@ const Home: NextPage = () => {
     [...seller].forEach((seller) => {
       products = [...products, ...seller.sellerProducts];
     });
-
     return products;
   };
 
@@ -132,14 +131,11 @@ const Home: NextPage = () => {
             fill="#596380"
           ></path>
         </svg>
-        <section>
+        <section className="pb-16">
           <Container>
             <div className="flex flex-col gap-8">
               <div className="grid grid-cols-2 gap-8 items-center my-4">
                 <div className="col-span-2 md:col-span-1 text-center md:text-right pl-0 md:pl-16 order-2 md:order-1">
-                  <div className="text-xs title-gradient font-extrabold">
-                    1.
-                  </div>
                   <div className="text-3xl md:text-4xl font-extrabold title-gradient mb-4">
                     Artistes Vérifiés
                   </div>
@@ -151,7 +147,7 @@ const Home: NextPage = () => {
                 <div className="col-span-2 md:col-span-1 flex justify-center md:justify-start order-1 md:order-2">
                   <img
                     className="max-h-[180px] md:max-h-[250px] pl-0 md:pl-8"
-                    src="/assets/img/check.png"
+                    src="/assets/img/check.svg"
                   ></img>
                 </div>
               </div>
@@ -159,13 +155,10 @@ const Home: NextPage = () => {
                 <div className="col-span-2 md:col-span-1 flex justify-center md:justify-end">
                   <img
                     className="max-h-[180px] md:max-h-[250px] pr-0 md:pr-8"
-                    src="/assets/img/paint.png"
+                    src="/assets/img/paint.svg"
                   ></img>
                 </div>
                 <div className="col-span-2 md:col-span-1 text-center md:text-left pr-0 md:pr-16">
-                  <div className="text-xs title-gradient font-extrabold">
-                    2.
-                  </div>
                   <div className="text-3xl md:text-4xl font-extrabold title-gradient mb-4">
                     Peinture de Qualité
                   </div>
@@ -177,9 +170,6 @@ const Home: NextPage = () => {
               </div>
               <div className="grid grid-cols-2 gap-8 items-center">
                 <div className="col-span-2 md:col-span-1 text-center md:text-right pl-0 md:pl-16 order-2 md:order-1">
-                  <div className="text-xs title-gradient font-extrabold">
-                    3.
-                  </div>
                   <div className="text-3xl md:text-4xl font-extrabold title-gradient mb-4">
                     Créations Unique
                   </div>
@@ -191,25 +181,10 @@ const Home: NextPage = () => {
                 <div className="col-span-2 md:col-span-1 flex justify-center md:justify-start order-1 md:order-2">
                   <img
                     className="max-h-[180px] md:max-h-[250px] pl-0 md:pl-8"
-                    src="/assets/img/bulb.png"
+                    src="/assets/img/idea.svg"
                   ></img>
                 </div>
               </div>
-            </div>
-            <div className="flex justify-center items-center gap-4 my-12">
-              <Link href={routes.sellers}>
-                <a className="rounded-full px-8 py-3 text-white border border-primary-500 bg-primary-500 hover:bg-primary-400 duration-200 transition-all ease-in-out">
-                  Trouver un artiste
-                </a>
-              </Link>
-              <a
-                href="https://sneakarts.com/fr/"
-                target={"_blank"}
-                rel="noreferrer nooperer"
-                className="rounded-full px-8 py-3 text-primary-500 hover:text-white border border-primary-500 hover:bg-primary-500 duration-200 transition-all ease-in-out"
-              >
-                Acheter un kit
-              </a>
             </div>
           </Container>
         </section>
