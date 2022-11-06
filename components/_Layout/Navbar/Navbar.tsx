@@ -29,7 +29,7 @@ const Navbar: React.FC<NavbarProps> = () => {
       as="nav"
       className="bg-white/70 dark:bg-dark-600/70 backdrop-filter backdrop-blur items-center sticky top-0 z-20"
     >
-      {({ open }) => (
+      {({ open, close }) => (
         <>
           <Container>
             <div className="relative flex items-center justify-between h-16">
@@ -141,13 +141,14 @@ const Navbar: React.FC<NavbarProps> = () => {
                     <a
                       className={classNames(
                         router.pathname == item.href
-                          ? "bg-dark-500"
-                          : "hover:bg-dark-500",
+                          ? "bg-primary-500 text-white"
+                          : "hover:bg-gray-100 hover:dark:bg-dark-500",
                         "block px-3 py-2 rounded-md text-base font-medium duration-200 ease-in-out transition"
                       )}
                       aria-current={
                         router.pathname == item.href ? "page" : undefined
                       }
+                      onClick={() => close()}
                     >
                       {item.name}
                     </a>
